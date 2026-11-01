@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oak &amp; Ember Furniture | Furniture Website (Demo)</title>
+    <meta name="description" content="Oak & Ember is a fictional Lagos furniture store built as a frontend portfolio demo: product browsing, search, enquiry buttons and a working contact form.">
+
+    <!-- Style Css Link -->
+    <link rel="icon" type="image/png" href="./images/logo.png">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Header Start -->
+    <header class="header">
+        <nav aria-label="Main navigation">
+            <input type="checkbox" id="show-search">
+            <input type="checkbox" id="show-menu">
+            <label for="show-menu" class="menu-icon"><i class="fas fa-bars" aria-hidden="true"></i><span class="sr-only">Open menu</span></label>
+            <div class="content">
+                <div class="logo"><a href="index.html"><img src="./images/logo.png" alt="Oak &amp; Ember Furniture logo"></a></div>
+
+                <ul class="links">
+                    <li><a href="#" id="first">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#product">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#review">Reviews</a></li>
+                </ul>
+            </div>
+            <label for="show-search" class="search-icon"><i class="fas fa-search" aria-hidden="true"></i><span class="sr-only">Open search</span></label>
+            <form class="search-box" id="search-form" role="search">
+                <label for="search-input" class="sr-only">Search products</label>
+                <input type="search" id="search-input" placeholder="Search sofas, chairs..." required>
+                <button type="submit" class="go-icon" aria-label="Search"><i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i></button>
+            </form>
+        </nav>
+    </header>
+    <!-- Header End -->
+
+
+    <main>
+
+    <!-- Home Section Start -->
+    <section class="home">
+        <div class="main-text">
+            <h1>Discover The Best <br>Furniture For You</h1>
+            <p>Comfortable, beautifully made furniture that makes every room feel like home, from cosy armchairs to statement sofas.</p>
+            <p>Delivered across Lagos, with friendly help choosing the right piece for your space.</p>
+            <p class="demo-tag">Portfolio demo: Oak &amp; Ember is a fictional brand. Prices and details are samples.</p>
+            <button id="btn" type="button" data-scroll="#product">View Products</button>
+        </div>
+    </section>
+    <!-- Home Section End -->
+
+
+    <!-- Top Section Card Start -->
+    <section class="offers" aria-label="Why shop with us">
+        <div class="offer-content">
+            <div class="row">
+                <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+                <h3>Free Delivery</h3>
+                <p>Free delivery on orders anywhere in Lagos.</p>
+            </div>
+            <div class="row">
+                <i class="fa-solid fa-headset" aria-hidden="true"></i>
+                <h3>Friendly Support</h3>
+                <p>Questions answered by phone, email or WhatsApp.</p>
+            </div>
+            <div class="row">
+                <i class="fa-solid fa-rotate-left" aria-hidden="true"></i>
+                <h3>30 Day Return</h3>
+                <p>Not the right fit? Return it within 30 days.</p>
+            </div>
+            <div class="row">
+                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                <h3>Pay on Delivery</h3>
+                <p>Pay when your furniture arrives safely.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Top Section Card End -->
+
+
+    <!-- About Section Start -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="./images/about-img.png" alt="Grey sofa with navy cushions in a styled living room">
+        </div>
+        <div class="about-text">
+            <h3>About Oak &amp; Ember</h3>
+            <p>Oak &amp; Ember is a family furniture store in Lagos. We choose every piece for comfort, quality and style, so you can create a home you love spending time in.</p>
+            <p class="about-more" id="about-more" hidden>From compact chairs for small apartments to full living-room sets, our team helps you pick pieces that fit your space and budget. We deliver, assemble and take away the packaging, so all you need to do is relax.</p>
+
+            <button id="about-btn" type="button" aria-expanded="false" aria-controls="about-more">Read More</button>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+
+    <!-- Product Section Start -->
+    <section class="product" id="product">
+        <div class="main-txt">
+            <h3>Products</h3>
+        </div>
+        <p class="search-status" id="search-status" role="status" hidden></p>
+        <div class="card-content">
+            <div class="row">
+                <img src="./images/p1.png" alt="Taupe three-seater fabric sofa">
+                <div class="card-body">
+                    <h3>Haven 3-Seater Sofa</h3>
+                    <p>Deep, soft cushions in durable taupe fabric.</p>
+                    <h5>₦650,000</h5>
+                    <button type="button" class="order-btn" data-product="Haven 3-Seater Sofa">Order Now</button>
+                </div>
+            </div>
+            <div class="row">
+                <img src="./images/p2.png" alt="Blue tufted wingback armchair with wooden legs">
+                <div class="card-body">
+                    <h3>Azure Wingback Armchair</h3>
+                    <p>A bold blue reading chair with a tufted back.</p>
+                    <h5>₦185,000</h5>
+                    <button type="button" class="order-btn" data-product="Azure Wingback Armchair">Order Now</button>
+                </div>
+            </div>
+            <div class="row">
+                <img src="./images/p3.png" alt="Brown tufted Chesterfield-style sofa">
+                <div class="card-body">
+                    <h3>Chesterfield Sofa</h3>
+                    <p>Classic button-tufted sofa in rich brown.</p>
+                    <h5>₦720,000</h5>
+                    <button type="button" class="order-btn" data-product="Chesterfield Sofa">Order Now</button>
+                </div>
+            </div>
+            <div class="row">
+                <img src="./images/p4.png" alt="Yellow lounge chair with matching footstool and side table">
+                <div class="card-body">
+                    <h3>Sunburst Lounge Set</h3>
+                    <p>Lounge chair, footstool and side table.</p>
+                    <h5>₦310,000</h5>
+                    <button type="button" class="order-btn" data-product="Sunburst Lounge Set">Order Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-content">
+            <div class="row">
+                <img src="./images/p5.png" alt="Light grey shell dining chair with wooden legs">
+                <div class="card-body">
+                    <h3>Nordic Dining Chair</h3>
+                    <p>Light, modern and easy to clean.</p>
+                    <h5>₦45,000</h5>
+                    <button type="button" class="order-btn" data-product="Nordic Dining Chair">Order Now</button>
+                </div>
+            </div>
+            <div class="row">
+                <img src="./images/p6.png" alt="White tufted settee with curved arms">
+                <div class="card-body">
+                    <h3>Pearl Tufted Settee</h3>
+                    <p>An elegant white settee for formal rooms.</p>
+                    <h5>₦480,000</h5>
+                    <button type="button" class="order-btn" data-product="Pearl Tufted Settee">Order Now</button>
+                </div>
+            </div>
+            <div class="row">
+                <img src="./images/p7.png" alt="Plum velvet accent chair with gold legs">
+                <div class="card-body">
+                    <h3>Plum Velvet Accent Chair</h3>
+                    <p>Soft velvet with slim gold legs.</p>
+                    <h5>₦120,000</h5>
+                    <button type="button" class="order-btn" data-product="Plum Velvet Accent Chair">Order Now</button>
+                </div>
+            </div>
+            <div class="row">
+                <img src="./images/p8.png" alt="Mustard yellow accent chair with wooden legs">
+                <div class="card-body">
+                    <h3>Marigold Accent Chair</h3>
+                    <p>A cheerful pop of colour for any corner.</p>
+                    <h5>₦115,000</h5>
+                    <button type="button" class="order-btn" data-product="Marigold Accent Chair">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Product Section End -->
+
+
+    <!-- Banner Start -->
+    <section class="banner" aria-label="Weekly sale">
+        <div class="banner-content">
+            <h5>Get Discount Up To 50%</h5>
+            <h3>Best Deals This Week</h3>
+            <p>Half price on selected sofas, chairs and storage. <br>Don't miss out!</p>
+            <button type="button" data-scroll="#products">Shop the Sale</button>
+        </div>
+    </section>
+    <!-- Banner End -->
+
+
+    <!-- Sale Products Start -->
+    <section class="product" id="products" style="margin-top: 50px;">
+        <div class="main-txt">
+            <h3>50% Off Products</h3>
+        </div>
+        <div class="card-content">
+            <div class="row">
+                <img src="./images/p9.png" alt="Light grey three-seater sofa with cushions">
+                <div class="card-body">
+                    <h3>Cloud Grey Sofa</h3>
+                    <p>Relaxed three-seater with scatter cushions.</p>
+                    <h5><del>₦600,000</del> ₦300,000</h5>
+                    <button type="button" class="order-btn" data-product="Cloud Grey Sofa (sale)">Order Now</button>
+                </div>
+            </div>
+            <div class="row">
+                <img src="./images/p10.png" alt="Walnut TV console with drawers and a black door">
+                <div class="card-body">
+                    <h3>Walnut TV Console</h3>
+                    <p>Plenty of storage for a tidy living room.</p>
+                    <h5><del>₦260,000</del> ₦130,000</h5>
+                    <button type="button" class="order-btn" data-product="Walnut TV Console (sale)">Order Now</button>
+                </div>
+            </div>
+            <div class="row">
+                <img src="./images/p11.png" alt="Round rattan lounge chair with brown cushions">
+                <div class="card-body">
+                    <h3>Rattan Nest Chair</h3>
+                    <p>A cosy round chair for indoor or patio use.</p>
+                    <h5><del>₦220,000</del> ₦110,000</h5>
+                    <button type="button" class="order-btn" data-product="Rattan Nest Chair (sale)">Order Now</button>
+                </div>
+            </div>
+            <div class="row">
+                <img src="./images/p12.png" alt="Plum velvet dining chair with gold legs">
+                <div class="card-body">
+                    <h3>Velvet Dining Chairs (Set of 2)</h3>
+                    <p>Two plum velvet chairs for your dining table.</p>
+                    <h5><del>₦180,000</del> ₦90,000</h5>
+                    <button type="button" class="order-btn" data-product="Velvet Dining Chairs, Set of 2 (sale)">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sale Products End -->
+
+
+    <!-- Our Gallery Start -->
+    <section class="gallary" aria-label="Gallery">
+        <h3>Our Gallery</h3>
+        <div class="gallary-img">
+            <div class="img1">
+                <img src="./images/g1.png" alt="Pale blue armchair beside a plant stand in a bright room">
+            </div>
+            <div class="img1">
+                <img src="./images/g2.png" alt="Navy sofa against a deep blue wall">
+                <img src="./images/g3.png" alt="Modern lounge with white chairs and pendant lights">
+            </div>
+        </div>
+    </section>
+    <!-- Our Gallery End -->
+
+
+    <!-- Contact Section Start -->
+    <section class="contact" id="contact">
+        <div class="content-text">
+            <h2>Get In <span>Touch</span></h2>
+            <p>Have a question, or ready to order? Send us a message and we'll reply within one working day.</p>
+            <p>Tap <strong>Order Now</strong> on any product and we'll fill in the product name for you.</p>
+            <ul class="list">
+                <li><a href="tel:+2348000000000">+234 800 000 0000 (sample)</a></li>
+                <li><a href="mailto:hello@oakandember.example">hello@oakandember.example (sample)</a></li>
+                <li>Lekki, Lagos (fictional store)</li>
+            </ul>
+        </div>
+
+        <div class="contact-form">
+            <!-- Replace YOUR_FORM_ID with your Formspree form ID (see README.md) -->
+            <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+                <label for="name" class="sr-only">Your name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
+
+                <label for="phone" class="sr-only">Phone number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Phone (e.g. 0803 123 4567)" autocomplete="tel" pattern="[\d\s+\-\(\)]{7,20}" required>
+
+                <label for="email" class="sr-only">Email address</label>
+                <input type="email" id="email" name="email" placeholder="Email" autocomplete="email" required>
+
+                <label for="product-field" class="sr-only">Product you're interested in</label>
+                <input type="text" id="product-field" name="product" placeholder="Product you're interested in (optional)">
+
+                <label for="message" class="sr-only">Message</label>
+                <textarea id="message" name="message" rows="8" placeholder="Your message" required></textarea>
+
+                <input type="submit" value="Send" class="submit">
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+
+
+    <!-- Review Section Start -->
+    <section class="review" id="review">
+        <div class="main-txt">
+            <h3>Customer <span>Reviews</span></h3>
+        </div>
+        <p class="demo-tag demo-tag-dark">Sample reviews for this demo project. Names and photos are illustrative.</p>
+
+        <div class="review-content">
+            <div class="box">
+                <div class="img">
+                    <img src="./images/pic-1.png" alt="">
+                </div>
+                <h3>Tunde, Ikeja</h3>
+                <div class="star" aria-label="5 out of 5 stars">
+                    <i class="fa-solid fa-star checked" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star checked" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star checked" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star checked" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star checked" aria-hidden="true"></i>
+                </div>
+                <p>"The sofa arrived on time and the delivery team set everything up. Very comfortable."</p>
+            </div>
+            <div class="box">
+                <div class="img">
+                    <img src="./images/pic-2.png" alt="">
+                </div>
+                <h3>Chioma, Lekki</h3>
+                <div class="star" aria-label="5 out of 5 stars">
+                    <i class="fa-solid fa-star checked" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star checked" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star checked" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star checked" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star checked" aria-hidden="true"></i>
+                </div>
+                <p>"They helped me choose chairs that fit my small apartment perfectly."</p>
+            </div>
+            <div class="box">
+                <div class="img">
+                    <img src="./images/pic-3.png" alt="">
+                </div>
+                <h3>David, Abuja</h3>
+                <div class="star" aria-label="4 out of 5 stars">
+                    <i class="fa-solid fa-star checked" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star checked" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star checked" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star checked" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                </div>
+                <p>"Good quality and fair prices. I'd like more colour options, but I'm happy overall."</p>
+            </div>
+        </div>
+    </section>
+    <!-- Review Section End -->
+
+    </main>
+
+
+    <!-- Footer Start -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="logo">
+                <img src="./images/logo.png" alt="Oak &amp; Ember Furniture logo">
+            </div>
+
+            <p>Oak &amp; Ember Furniture: comfortable, well-made furniture for every home.
+                <br>A fictional brand created as a frontend portfolio project.
+            </p>
+            <div class="socail-links" aria-hidden="true">
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-pinterest-p"></i>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom-content">
+            <p>Designed and built by <a href="https://adejoke234.github.io/nabilat-portfolio-/" target="_blank" rel="noopener">Nabilat Salawudeen</a></p>
+            <div class="copyright">
+                <p>&copy; <span id="year">2026</span> <strong>Nabilat Salawudeen</strong>. Portfolio demo.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <a href="#" class="arrow" aria-label="Back to top"><img src="./images/up-arrow.png" alt="" width="50"></a>
+
+</body>
+</html>
