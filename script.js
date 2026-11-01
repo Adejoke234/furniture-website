@@ -98,7 +98,9 @@ contactForm.addEventListener("submit", async (event) => {
   }
 
   if (contactForm.action.includes("YOUR_FORM_ID")) {
-    showStatus("This demo form isn't connected to an inbox yet. See README.md to connect Formspree.", "error");
+    // Demo mode: no inbox is connected, so show a friendly message instead of sending
+    contactForm.reset();
+    showStatus("Thank you! This is a portfolio demo, so messages aren't actually sent. Everything else on the form works.", "success");
     return;
   }
 
